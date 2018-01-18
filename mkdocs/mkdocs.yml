@@ -1,0 +1,28 @@
+site_name: Develop Glyph
+site_description: K.Himenoがお送りするサイト
+site_author: Develop Glyph
+site_url: https://github.com/Himenon/glyph-docs
+
+repo_name: glyph-docs
+repo_url: https://github.com/Himenon/glyph-docs
+edit_uri: edit/master/mkdocs/docs
+
+dev_addr: 127.0.0.1:8080
+
+markdown_extensions:
+  - fontawesome_markdown
+
+theme: material
+
+extra_css: []
+
+extra_javascript: []
+
+markdown_extensions:
+  - admonition
+  - markdown_include.include:
+      base_path: docs
+
+pages:
+- 'index.md'
+- 'mkdocs-qa.md'

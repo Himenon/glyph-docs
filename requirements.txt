@@ -1,0 +1,6 @@
+mkdocs
+mkdocs-material
+fontawesome_markdown
+markdown-include
+pygments
+pymdown-extensions
