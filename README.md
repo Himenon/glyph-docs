@@ -1,6 +1,6 @@
 # glyph-docs
 
-立ち上げ
+[![Build Status](https://travis-ci.org/Himenon/glyph-docs.svg?branch=master)](https://travis-ci.org/Himenon/glyph-docs)
 
 ```bash
 $ docker-compose up
