@@ -7,9 +7,9 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: "%{HEROKU_API_KEY}"
+    secure: "Zv+/KFDoeYCojA4xsYpGTnU4nIKIzyECauABsiY0wIB6BT3IKbxwl5LNvw8LFNqmtmkjTrJF3Vy3ESoU/nxDKCMvjIwEb37x2uMQii+yXAML0kqPwQOZUcGCQMQ6/SkuBLmsUKlZ4LnMD6xCEOkNhL0XYOKbQD40FU6BS4a3ZNSX2aICYeiPEi60yXP3308iTzKlKaXPgAobULJguuV9L48sCjN9jEg+szz+nSS9LLRPMojnc1qkluyD3HRa3BJ+EJWr4XwdYUB709kls1H6KchZfwMTTHYH7rwI5OfgGrAfSg5Ogr3bWcW5dlx2xK0TOyH5z8SIh9TgGDE5P9FaXHVfuKNumvihToa9S+BsxmiJGysIMwOMVd9yn6+FxAdIV+HeKR/u5FtNmA5sqyTPVLJIiR+mEEfClUzTsvaKS3m4ac0aklkdyPI4vjAGbOUxR9EsUlXXZKf3XhZpLiBhT7W42qOsMvoVukhNnbkaKjOgQgjxk6+KVuU2jND3rzbf+lEGHWt664LFt9Dg2n8BrkYnXNza76eDkU3Lw7uiCWVGPKLL8V8KC878JsyQzUU5v5+Tatd1Adspcj+1E1RI9h8eQusW/HoFBsVQ6Di2LMmpFqLo2mhUQ0LWEE7xpF55oiAcepLxLKDrng8rQu00RG66DAzqIXZwC6GXnok3AYE="
   app: glyph-docs
-  run: heroku container:push web --arg SERVER_HOST="%{SERVER_HOST}"
+  run: heroku container:push web --arg SERVER_HOST="glyph-docs.herokuapp.com"
   on:
     branch: master
     repo: Himenon/glyph-docs
