@@ -43,11 +43,14 @@ $ travis setup heroku
 ローカルからでもこれ単体で動きます。
 
 ```bash	
+# Login
+$ heroku container:login
+
 # Basic認証あり
-$ heroku container:push web --arg SERVER_HOST=[SERVER_HOST],BASIC_PASS='[BASIC_PASS]'
+$ heroku container:push web --arg MKDOCS_SERVER=[SERVER_HOST],BASIC_PASS='[BASIC_PASS]'
 
 # Basic認証なし
-$ heroku container:push web --arg SERVER_HOST=[SERVER_HOST]
+$ heroku container:push web --arg MKDOCS_SERVER=[SERVER_HOST]
 ```
 
 CIに設定するときは、`SERVER_HOST`を環境変数から注入すると便利。
