@@ -7,9 +7,9 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: %{HEROKU_API_KEY}
+    secure: "%{HEROKU_API_KEY}"
   app: glyph-docs
-  run: heroku container:push web --arg SERVER_HOST=%{SERVER_HOST}
+  run: heroku container:push web --arg SERVER_HOST="%{SERVER_HOST}"
   on:
     branch: master
     repo: Himenon/glyph-docs
