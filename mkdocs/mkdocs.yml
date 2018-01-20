@@ -26,4 +26,5 @@ markdown_extensions:
 
 pages:
 - 'index.md'
-- 'mkdocs-qa.md'
+- 'mkdocs/mkdocs-qa.md'
+- 'mkdocs/deploy-mkdocs-to-heroku.md'

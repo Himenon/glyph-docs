@@ -1,7 +1,20 @@
+FROM python:3.6.4-alpine3.7 AS build-mkdocs
+
+COPY ./requirements.txt /
+RUN pip install -r /requirements.txt
+
+RUN mkdir -p /src
+COPY ./mkdocs /src
+
+WORKDIR /src
+RUN mkdocs build
+
+# ------------------------------------------------------------
+
 FROM nginx:latest
 
-COPY ./mkdocs.conf /etc/nginx/conf.d/mkdocs.conf
-COPY ./mkdocs/site /site
+COPY --from=build-mkdocs /src/site /site
+COPY ./nginx/mkdocs.conf /etc/nginx/conf.d/mkdocs.conf
 
 ARG MKDOCS_SERVER=localhost
 RUN envsubst '$MKDOCS_SERVER' < /etc/nginx/conf.d/mkdocs.conf > /etc/nginx/conf.d/mkdocs.conf
