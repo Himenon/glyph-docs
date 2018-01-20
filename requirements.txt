@@ -2,5 +2,5 @@ mkdocs
 mkdocs-material
 fontawesome_markdown
 markdown-include
-pygments
+Pygments>=2.2
 pymdown-extensions

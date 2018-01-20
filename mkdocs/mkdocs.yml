@@ -1,7 +1,6 @@
-site_name: Develop Glyph
-site_description: K.Himenoがお送りするサイト
-site_author: Develop Glyph
-site_url: https://github.com/Himenon/glyph-docs
+site_name: 技術調査用リポジトリ
+site_description: mkdocsでホスティングされています。
+site_author: HimenoGlyph
 
 repo_name: glyph-docs
 repo_url: https://github.com/Himenon/glyph-docs
@@ -22,6 +21,8 @@ markdown_extensions:
   - admonition
   - markdown_include.include:
       base_path: docs
+  - codehilite:
+      linenums: true
 
 pages:
 - 'index.md'

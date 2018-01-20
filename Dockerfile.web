@@ -1,4 +1,0 @@
-FROM nginx:alpine
-
-COPY ./mkdocs/site /usr/share/nginx/html
-ENV MKDOCS_SERVER
