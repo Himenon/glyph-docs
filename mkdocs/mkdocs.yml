@@ -1,4 +1,4 @@
-site_name: 技術調査用リポジトリ
+site_name: WEB技術調査ドキュメント
 site_description: mkdocsでホスティングされています。
 site_author: HimenoGlyph
 
@@ -24,7 +24,12 @@ markdown_extensions:
   - codehilite:
       linenums: true
 
+google_analytics: ['UA-55455343-6', 'glyph-docs.herokuapp.com']
+
 pages:
 - 'index.md'
-- 'mkdocs/mkdocs-qa.md'
-- 'mkdocs/deploy-mkdocs-to-heroku.md'
+- '新着':
+  - 'news/css-traking.md'
+- 'MkDocs':
+  - 'mkdocs/mkdocs-qa.md'
+  - 'mkdocs/deploy-mkdocs-to-heroku.md'

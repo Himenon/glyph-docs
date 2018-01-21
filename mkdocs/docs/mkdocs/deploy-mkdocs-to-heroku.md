@@ -59,5 +59,31 @@ CIに設定するときは、`SERVER_HOST`を環境変数から注入すると�
 - `BASIC_PASS`: `htpasswd -c`で作成した文字列
 
 
+## エラー
 
+```
+Preparing deploy
+Cleaning up git repository with `git stash --all`. If you need build artifacts for deployment, set `deploy.skip_cleanup: true`. See https://docs.travis-ci.com/user/deployment/#Uploading-Files.
+No local changes to save
+creating application archive
+```
+
+```
+Deploying application
+uploading application archive
+...
+
+=== Fetching app code failed
+=!= Your app does not include a heroku.yml build manifest. To deploy your app, either create a heroku.yml: https://devcenter.heroku.com/articles/heroku-yml-build-manifest
+Or change your stack by running: 'heroku stack:set heroku-16'
+heroku build still pending
+heroku build still pending
+heroku build still pending
+heroku build still pending
+heroku build still pending
+heroku build still pending
+No stash entries found.
+deploy failed, build exited with code 1
+failed to deploy
+```
 
