@@ -2,8 +2,6 @@ sudo: required
 language: python
 services:
 - docker
-script:
-- docker build .
 deploy:
   provider: heroku
   api_key:

@@ -15,6 +15,7 @@ FROM nginx:latest
 
 COPY --from=build-mkdocs /src/site /site
 COPY ./nginx/mkdocs.conf /etc/nginx/conf.d/mkdocs.conf
+COPY ./entrypoint.sh /entrypoint.sh
 
 ARG MKDOCS_SERVER=localhost
 RUN envsubst '$MKDOCS_SERVER' < /etc/nginx/conf.d/mkdocs.conf > /etc/nginx/conf.d/mkdocs.conf
@@ -23,6 +24,4 @@ RUN mkdir /etc/nginx/passwd
 ARG BASIC_PASS
 RUN echo $BASIC_PASS > /etc/nginx/passwd/tfdocs
 
-CMD sed -e "/ listen / s/80/$PORT/" -i /etc/nginx/conf.d/default.conf && \
-    envsubst '$PORT' < /etc/nginx/conf.d/mkdocs.conf > /etc/nginx/conf.d/mkdocs.conf && \
-    nginx -g 'daemon off;'
+CMD /entrypoint.sh
