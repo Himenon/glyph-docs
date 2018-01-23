@@ -33,3 +33,6 @@ pages:
 - 'MkDocs':
   - 'mkdocs/mkdocs-qa.md'
   - 'mkdocs/deploy-mkdocs-to-heroku.md'
+- 'Kubernetes':
+  - 'kubernetes/helm-develop.md'
+
